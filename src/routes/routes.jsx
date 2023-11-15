@@ -1,9 +1,15 @@
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
+import ChatContent from "../components/ChatContent";
+import ChatList from "../components/ChatList";
 
 const routes = [
     {
         path: '/',
-        element: <p>Hola</p>
+        element: <ChatList />
+    },
+    {
+        path: '/chat/:id',
+        element: <ChatContent />
     }
 ]
 
