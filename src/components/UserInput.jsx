@@ -21,9 +21,9 @@ export default function UserInput({ onClick }) {
             </svg>
         </span>
         <input className="mx-2 tracking-wider text-gray-600 flex h-9 w-full bg-transparent px-3 py-1 text-sm transition-colors file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground outline-none ring-0 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Su usuario aquí..." type="" value={user} onChange={ev=>setUser(ev.target.value)}/>
-        <button onClick={()=>onClick(user)}>
+        <button onClick={()=>onClick(user)} disabled={user.trim()===''} className="text-blue-500 disabled:text-gray-400">
             <svg
-                className="h-4 w-4 text-gray-400"
+                className="h-4 w-4"
                 fill="none"
                 height="24"
                 stroke="currentColor"

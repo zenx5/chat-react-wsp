@@ -30,10 +30,8 @@ export default function ChatList() {
     },[user, cookies, navigate])
 
     useEffect(()=>{
-      console.log('user', user)
       if( user ) {
           Conversation.onChange( items => {
-              console.log(items)
               setConversations(items)
           } )
       }

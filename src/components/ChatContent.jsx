@@ -31,7 +31,6 @@ export default function ChatContent() {
     useEffect(()=>{
         if( id && user ) {
             Conversation.onChange( items => {
-                console.log( items )
                 setTitle( items?.name )
                 setMessages(items.messages)
             }, id)
